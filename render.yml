@@ -5,5 +5,9 @@ image:
   envVars:
       - key: postgres://ouerghi:2duiLwGssWGjjdFtt8CifXZvmNthmd0h@dpg-cj8g5bdjeehc73bvfefg-a/dbnocodb_jm22
         fromDatabase:
-          name: dbnocodb_jm22
-          property: connectionString 
+          host: dpg-cj8g5bdjeehc73bvfefg-a
+          port: 5432
+          database: dbnocodb_jm22
+          user: ouerghi
+          password: 2duiLwGssWGjjdFtt8CifXZvmNthmd0h
+          connectionString: postgres://ouerghi:2duiLwGssWGjjdFtt8CifXZvmNthmd0h@dpg-cj8g5bdjeehc73bvfefg-a/dbnocodb_jm22
