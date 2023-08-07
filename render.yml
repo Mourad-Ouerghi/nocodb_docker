@@ -2,3 +2,7 @@ runtime: image
 
 image:
   url: https://hub.docker.com/layers/nocodb/nocodb/0.9.31/images/sha256-2df4871a627fb115370585b6c169554d91f42564f79a3c7801301a3f107f8a96?context=explore
+databases:
+  - name: nocodb-db
+    databaseName: dbnocodb 
+    user: ouerghi
