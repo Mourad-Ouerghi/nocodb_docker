@@ -1,16 +1,15 @@
 services:
-  # A Docker web service
   - type: web
     name: nocodb
     env: docker
     dockerfilePath: "./Dockerfile"
-    region: oregon # optional (defaults to oregon)
+    region: oregon
     healthCheckPath: /dashboard
     autoDeploy: false
     envVars:
       - key: postgres://ouerghi:2duiLwGssWGjjdFtt8CifXZvmNthmd0h@dpg-cj8g5bdjeehc73bvfefg-a/dbnocodb_jm22
         fromDatabase:
-          name: dbnocodb_jm22
+          name: postgres-nocodb
           property: connectionString
       - key: PORT
         value: 8080
