@@ -1,3 +1,5 @@
 FROM nocodb/nocodb:latest
-ENTRYPOINT ["sh", "/usr/src/appEntry/start.sh"]
-RUN PGPASSWORD=2duiLwGssWGjjdFtt8CifXZvmNthmd0h psql -h dpg-cj8g5bdjeehc73bvfefg-a.oregon-postgres.render.com -U ouerghi dbnocodb_jm22
+
+ARG PGPASSWORD PGHOST PGPORT PGDATABASE PGUSER NC_AUTH_JWT_SECRET
+
+ENV NC_DB="pg://$PGHOST:$PGPORT?u=$PGUSER&p=$PGPASSWORD&d=$PGDATABASE"
